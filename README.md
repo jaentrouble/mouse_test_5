@@ -20,5 +20,6 @@ Moreover, since we now have the baseline, see if the mouse can learn from sparse
 ## Conditions:
 
 1. Change reward mechanism : -0.1 for all movements, 1 for eating the apple.
+    - *0.1 was too much(ending game gets more reward). Changed to -0.01*
 
 2. Compare learning from the scratch and *Reused* model from mouse_test_4

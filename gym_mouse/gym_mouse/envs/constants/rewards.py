@@ -1,3 +1,3 @@
-get_close_to_apple = -0.1
-get_away_from_apple = -0.1
-eat_apple = 1.1
+get_close_to_apple = -0.01
+get_away_from_apple = -0.01
+eat_apple = 1.01
