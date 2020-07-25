@@ -5,7 +5,7 @@ register(
     entry_point='gym_mouse.envs:MouseEnv'
 )
 register(
-    id='mouseCl-v0',
+    id='mouseCl-v1',
     entry_point='gym_mouse.envs:MouseEnv_cl'
 )
 

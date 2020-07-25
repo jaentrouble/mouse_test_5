@@ -9,6 +9,8 @@ import argparse
 import os
 import sys
 
+ENVIRONMENT = 'mouseCl-v1'
+
 parser = argparse.ArgumentParser()
 parser.add_argument('-v', dest='vm',action='store_true', default=False)
 parser.add_argument('-l', dest='load',default=False)
@@ -34,7 +36,7 @@ if not args.vm :
     bar = np.ones((5,3),dtype=np.uint8)*np.array([255,255,0],dtype=np.uint8)
 # For benchmark
 st = time.time()
-env = gym.make('mouseCl-v0')
+env = gym.make(ENVIRONMENT)
 o = env.reset()
 if args.load :
     player = Player(env.observation_space, env.action_space,
@@ -61,7 +63,7 @@ if not args.load:
 else:
     save_dir, _ = os.path.split(args.load)
 next_dir = os.path.join(save_dir,str(next_save))
-score = player.evaluate(gym.make('mouseCl-v0'), vid_type)
+score = player.evaluate(gym.make(ENVIRONMENT), vid_type)
 print('eval_score:{0}'.format(score))
 print('{0}steps took {1} sec'.format(total_steps,time.time()-st))
 
