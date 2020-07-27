@@ -35,3 +35,8 @@ Moreover, since we now have the baseline, see if the mouse can learn from sparse
 3. I only changed the reward parameter, but maybe something could have gone wrong.
     - *Did a baseline test: -0.2 for getting farther away and 0.1 for getting closer (Like Test 4)*
     - __Result__: Tried only 200k, and the result was similar to Test 4. Therefore, it would be safe to say the difference between Test 4 and 5 is from the reward.
+
+4. Starting from pre-learned model may benefit as it allows the model to have more *eating apple* experience, which may complement the sparsity of the reward.
+    - *Loaded pre-trained model from mouse_test_4 and ran 4M steps*
+    - __Result__: Did not help at all. It converged to the same result as the first experiment.
+    
