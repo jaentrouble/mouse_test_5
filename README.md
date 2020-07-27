@@ -39,4 +39,6 @@ Moreover, since we now have the baseline, see if the mouse can learn from sparse
 4. Starting from pre-learned model may benefit as it allows the model to have more *eating apple* experience, which may complement the sparsity of the reward.
     - *Loaded pre-trained model from mouse_test_4 and ran 4M steps*
     - __Result__: Did not help at all. It converged to the same result as the first experiment.
-    
+
+5. Giving enough experience of *eating the apple* event did not help in terms of learning to eat the apple. This suggests that eating apple is not __that__ great choice under current reward conditions, i.e. the apple needs more reward to make the mouse move toward the apple.
+    - *Changed the __eating apple__ reward to 10.01*
