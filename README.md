@@ -42,3 +42,22 @@ Moreover, since we now have the baseline, see if the mouse can learn from sparse
 
 5. Giving enough experience of *eating the apple* event did not help in terms of learning to eat the apple. This suggests that eating apple is not __that__ great choice under current reward conditions, i.e. the apple needs more reward to make the mouse move toward the apple.
     - *Changed the __eating apple__ reward to 10.01*
+    - __Result__: Did not make dramatic difference. However, I did find out that there is a pattern, which was not very clear in last test. It starts to learn and the scores get better, but suddenly it drops again. 
+
+## Diagnosis
+
+- From the Fifth experiment (with a 10x reward for apple), I noticed a pattern.
+
+- This reminds me of the simple linear model which failed to learn sanity_env. It also reached 4.1 reward for a moment, but it dropped to 0 again. The problem back than was that the model was too simple to learn the observation.
+
+- Moreover, the Max_Q value shaked very much in every cases (even in mouse_test_4).
+
+- Need to record temporal difference(TD) to confirm, but it does remind me of the neuron experiment, when a simple linear model couldn't learn observations (the model was too simple to fit the observations to q values). That resulted in TD (which was represented as dopamine signal) not converging to 0 even with consistant inputs.
+
+- If this was the case, the mouse model needs to be more complicated.
+
+## TODO
+
+1. Add TD to tensorboard scalars. Run a short test with the last model to see if TD remains large and do not converge.
+
+2. Try more complex model. In particular, the eye model should be changed a bit. Conventional multiple convolution layers tend to lower the size of inputs, but increase in the number of filters. That is not the case with current model. The number of filter also decreases as layer gets deeper. Change filter numbers first.
