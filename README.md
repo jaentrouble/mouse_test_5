@@ -28,13 +28,13 @@ Moreover, since we now have the baseline, see if the mouse can learn from sparse
     - *Changed to -0.01 for every movements.*
     - __Result__: Scores did get better than nothing, but did not seem to learn well.
 ### from_scratch_0
-Reward (smoothing 0.95)
+> Reward (smoothing 0.95)
 ![image](https://user-images.githubusercontent.com/45917844/90631877-71118c00-e25e-11ea-9c67-a2e771f0233c.png)
 
-Score (smoothing 0.95)
+> Score (smoothing 0.95)
 ![image](https://user-images.githubusercontent.com/45917844/90632014-a7e7a200-e25e-11ea-8ce1-943358d278d7.png)
 
-MaxQ (smoothing 0.95)
+> MaxQ (smoothing 0.95)
 ![image](https://user-images.githubusercontent.com/45917844/90633789-a79cd600-e261-11ea-808b-fb34bebd1465.png)
 
 
@@ -43,13 +43,13 @@ MaxQ (smoothing 0.95)
     - *Tried 1M steps more*
     - __Result__: Did not change meaningfully, and cumulated rewards per a round got worse.
 ### from_scratch_1M
-Reward (smoothing 0.95)
+> Reward (smoothing 0.95)
 ![image](https://user-images.githubusercontent.com/45917844/90632468-6a374900-e25f-11ea-90ba-f4b45c90481c.png)
 
-Score (smoothing 0.95)
+> Score (smoothing 0.95)
 ![image](https://user-images.githubusercontent.com/45917844/90632508-7c18ec00-e25f-11ea-9833-9dffcbb4fd9a.png)
 
-MaxQ (smoothing 0.95)
+> MaxQ (smoothing 0.95)
 ![image](https://user-images.githubusercontent.com/45917844/90633833-bc796980-e261-11ea-8213-9ddc6efd08b0.png)
 
 
@@ -58,13 +58,13 @@ MaxQ (smoothing 0.95)
     - *Did a baseline test: -0.2 for getting farther away and 0.1 for getting closer (Like Test 4)*
     - __Result__: Tried only 200k, and the result was similar to Test 4. Therefore, it would be safe to say the difference between Test 4 and 5 is from the reward.
 ### baseline
-Reward (smoothing 0.95)
+> Reward (smoothing 0.95)
 ![image](https://user-images.githubusercontent.com/45917844/90632729-d87c0b80-e25f-11ea-8ca5-76f15cb6e7e1.png)
 
-Score (smoothing 0.95)
+> Score (smoothing 0.95)
 ![image](https://user-images.githubusercontent.com/45917844/90632758-e467cd80-e25f-11ea-9636-171e0f1f84ea.png)
 
-MaxQ (smoothing 0.95)
+> MaxQ (smoothing 0.95)
 ![image](https://user-images.githubusercontent.com/45917844/90633904-da46ce80-e261-11ea-9668-2174acc3bcc4.png)
 
 
@@ -73,13 +73,13 @@ MaxQ (smoothing 0.95)
     - *Loaded pre-trained model from mouse_test_4 and ran 4M steps*
     - __Result__: Did not help at all. It converged to the same result as the first experiment.
 ### start_from_4
-Reward (smoothing 0.95)
+> Reward (smoothing 0.95)
 ![image](https://user-images.githubusercontent.com/45917844/90632896-1a0cb680-e260-11ea-98ee-9336169f902a.png)
 
-Score (smothing 0.95)
+> Score (smothing 0.95)
 ![image](https://user-images.githubusercontent.com/45917844/90632946-2b55c300-e260-11ea-9e07-d2c5d3bd5c6b.png)
 
-MaxQ (smoothing 0.95)
+> MaxQ (smoothing 0.95)
 ![image](https://user-images.githubusercontent.com/45917844/90633964-f185bc00-e261-11ea-8847-883cfac2ddfa.png)
 
 
@@ -88,13 +88,13 @@ MaxQ (smoothing 0.95)
     - *Changed the __eating apple__ reward to 10.01*
     - __Result__: Did not make dramatic difference. However, I did find out that there is a pattern, which was not very clear in last test. It starts to learn and the scores get better, but suddenly it drops again. 
 ### from_scratch_big_r
-Reward (smoothing 0.95)
+> Reward (smoothing 0.95)
 ![image](https://user-images.githubusercontent.com/45917844/90633180-8d162d00-e260-11ea-8f8a-da03ad9b2bc3.png)
 
-Score (smothing 0.95)
+> Score (smothing 0.95)
 ![image](https://user-images.githubusercontent.com/45917844/90633348-d797a980-e260-11ea-9498-2d804cde220f.png)
 
-MaxQ (smoothing 0.95)
+> MaxQ (smoothing 0.95)
 ![image](https://user-images.githubusercontent.com/45917844/90633711-7a502800-e261-11ea-85b2-bab9a370ffe6.png)
 
 
